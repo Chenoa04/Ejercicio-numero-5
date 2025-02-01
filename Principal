@@ -1,0 +1,27 @@
+Ejercicio #5 
+
+def crear_listado():
+    listado = []
+    for i in range(1, 101):
+        if i % 2 == 0:
+            listado.append(i ** 2)
+        else:           
+            listado.append(i ** 3)
+     return listado
+
+def suma_millon(listado):
+    suma = 0
+    cantidad = 0
+    for numero in numeros:
+        if suma + numero < 1000000:
+            suma += numero
+            cantidad+= 1
+        else:
+            break
+     return suma, cantidad
+
+lista_numeros = crear_listado()
+resultado, cantidad = suma_millon(lista_numeros)
+
+print(f"Números en la lista : {lista_numeros}")
+print(f"La suma más cercana a un millón de estos numeros es: {resultado} y fueron sumados para obtenerlas {cantidad} números")
